@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Live Language Translation</title>
+    <link rel="stylesheet" href="static/styles.css">
+    <script src="static/script.js" defer></script>
+    <style>
+        /* Add style for the top-right corner text */
+        .top-right-text {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            text-align: right;
+            font-size: 14px;
+        }
+        .top-right-text b {
+            color: red; /* Make LBSNAA bold and red */
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <img src="https://www.lbsnaa.gov.in/images/lbsnaa-logo.png" alt="LBSNAA Logo" class="logo">
+        <script src="{{ url_for('static', filename='js/script.js') }}" defer></script>
+    </div>
+
+    <!-- Top Right Corner Text -->
+    <div class="top-right-text">
+        Made by: <b>LBSNAA</b>, <br>
+        Constantly evolving
+    </div>
+
+    <!-- Adjusted Heading Section -->
+    <div class="heading">
+        <h1 style="text-align: center;">Real-Time Translation Tool</h1>
+        <h2 style="text-align: center;">Language No Bar</h2>
+    </div>
+
+    <div class="main">
+        <label for="input_language">Input Language:</label>
+        <select id="input_language">
+            <option value="hi-IN">Hindi</option>
+            <option value="en-US">English</option>
+            <option value="ml-IN">Malayalam</option>
+            <option value="kn-IN">Kannada</option>
+            <option value="mr-IN">Marathi</option>
+            <option value="ne">Nepali</option>
+            <option value="pa-IN">Punjabi</option>
+            <option value="es">Spanish</option>
+            <option value="ta-IN">Tamil</option>
+            <!-- Add more Indian languages as needed -->
+        </select>
+
+        <label for="output_language">Output Language:</label>
+        <select id="output_language">
+            <option value="en">English</option>
+            <option value="hi">Hindi</option>
+            <option value="ml">Malayalam</option>
+            <!-- Add more Indian languages as needed -->
+        </select>
+
+        <div class="controls">
+            <button id="start-btn">Start Translation</button>
+            <button id="stop-btn">Stop Translation</button>
+        </div>
+
+        <div id="translation-output">
+            <h3>Translation Output:</h3>
+            <p id="translated-text"></p>
+        </div>
+    </div>
+</body>
+</html>

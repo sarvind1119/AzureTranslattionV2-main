@@ -1,0 +1,11 @@
+services:
+  - type: web
+    name: speech-translator
+    env: python
+    buildCommand: pip install -r requirements.txt
+    startCommand: gunicorn app:app
+    envVars:
+      - key: SPEECH_KEY
+        sync: false
+      - key: SPEECH_REGION
+        sync: false
