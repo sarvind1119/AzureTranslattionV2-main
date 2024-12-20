@@ -2,7 +2,8 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f9f9f9;
+    background-color: #000; /* Change background to black */
+    color: #fff; /* Change default text color to white */
 }
 
 .header {
@@ -27,9 +28,10 @@ body {
     max-width: 1000px;
     margin: 40px auto;
     padding: 20px;
-    background: #fff;
+    background: #000000;
     border-radius: 10px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    color: #fff; /* Change default text color to white */
 }
 
 h2 {
@@ -77,9 +79,10 @@ button:hover {
 }
 
 #translated-text {
-    font-size: 1.2rem;
-    color: #333;
-    background: #f4f4f4;
-    padding: 10px;
+    font-size: 20pt; /* Increase font size */
+    color: #fff; /* Change translated text to white */
+    background: #333; /* Optional: make the background darker for contrast */
+    padding: 20px; /* Add more padding */
     border-radius: 5px;
+    text-align: center; /* Center the text */
 }
