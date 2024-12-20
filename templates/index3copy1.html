@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Live Language Translation</title>
+    <link rel="stylesheet" href="static/styles.css">
+    <script src="static/script.js" defer></script>
+    <style>
+        .collapsible {
+            background-color: #f1f1f1;
+            color: #333;
+            cursor: pointer;
+            padding: 10px;
+            width: 100%;
+            border: none;
+            text-align: left;
+            outline: none;
+            font-size: 16px;
+        }
+
+        .collapsible:hover {
+            background-color: #ddd;
+        }
+
+        .content {
+            padding: 10px;
+            display: none;
+            overflow: hidden;
+            background-color: #f9f9f9;
+            border: 1px solid #ccc;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <script src="{{ url_for('static', filename='js/script.js') }}" defer></script>
+  
+    </div>
+
+    <div class="main">
+        <button class="collapsible">Open Panel</button>
+<div class="content">
+    <h2>Real-Time Translation Tool</h2>
+    <label for="input_language">Input Language:</label>
+    <select id="input_language">
+        <option value="en-US">English</option>
+        <option value="hi-IN">Hindi</option>
+        <option value="ml-IN">Malayalam</option>
+        <!-- Add more Indian languages as needed -->
+    </select>
+
+    <label for="output_language">Output Language:</label>
+    <select id="output_language">
+        <option value="en">English</option>
+        <option value="hi">Hindi</option>
+        <option value="ml">Malayalam</option>
+        <!-- Add more Indian languages as needed -->
+    </select>
+
+    <div class="controls">
+        <button id="start-btn">Start Translation</button>
+        <button id="stop-btn">Stop Translation</button>
+    </div>
+</div>
+
+
+       
+
+        <div id="translation-output">
+            <h3>Translation Output:</h3>
+            <p id="translated-text"></p>
+        </div>
+    </div>
+    <script>
+        const collapsible = document.querySelector(".collapsible");
+        const content = document.querySelector(".content");
+    
+        collapsible.addEventListener("click", function() {
+            this.classList.toggle("active");
+            content.style.display = content.style.display === "block" ? "none" : "block";
+        });
+    </script>
+</body>
+</html>
